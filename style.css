@@ -14,14 +14,6 @@ body {
     color: #fff;
 }
 
-/*#header {
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/port_bg.png);
-    background-size: cover;
-    background-position: center;
-}*/
-
 #header {
     padding-top: 100px; /* Adjust this if nav is taller/shorter */
     width: 100%;
@@ -34,13 +26,6 @@ body {
 .container {
     padding: 10px 10%;
 }
-
-/*nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}*/
 
 nav {
     position: fixed;
