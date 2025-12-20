@@ -11,6 +11,6 @@ Hi there! I'm **Britney Lu**, a **Computer Science major & Economics minor** at 
 - **Interests** – UX/UI, app dev, & web design  
 
 ## Tech Stack 💻  
-`Java` | `Python` | `MIPS Assembly` | `C` | `HTML/CSS`
+`Java` | `Python` | `HTML/CSS` | `JavaScript` | `C`
 
 Let’s connect! 🚀  
