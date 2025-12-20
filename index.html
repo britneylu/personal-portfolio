@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Britney Lu - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./static/css/style.css">
     <script src="https://kit.fontawesome.com/1c6782a8ec.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,7 +15,7 @@
         <div class="container">
             <nav>
                 <a href="#header">
-                    <img src="images/trans_logo.png" class="logo" alt="Logo">
+                    <img src="./static/images/trans_logo.png" class="logo" alt="Logo">
                 </a>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
@@ -38,34 +38,44 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user.png" alt = "Britney Lu">
+                    <img src="./static/images/user.png" alt="Britney Lu">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am an undergraduate student and a Kessler Scholar at the University of Pittsburgh. I am currently pursuing a Bachelor of Science in Computer Science and a Minor in Economics. My passion for computer science stems from my curiosity about how technology empowers innovation and enables us to solve complex problems efficiently.</p>
+                    <p>
+                        I am an undergraduate student and Kessler Scholar at the University of Pittsburgh, pursuing a
+                        B.S. in Computer Science with a minor in Economics. I am interested in product-focused
+                        development and enjoy working at the intersection of technology, design, and user needs to build
+                        thoughtful, scalable solutions.
+                    </p>
+
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                        <p class="tab-links" data-tab="skills">Skills</p>
                     </div>
+
                     <div class="tab-contents active-tab" id="experience">
                         <ul>
-                            <li><span>June 2025 - August 2025</span><br>Information Technology Intern – Systems Development, AAA Club Alliance</li>
                             <li><span>September 2024 - Present</span><br>Undergraduate Research Assistant, University of Pittsburgh</li>
+                            <li><span>June 2025 - August 2025</span><br>Information Technology Intern – Systems Development, AAA Club Alliance</li>
                             <li><span>February 2024 - April 2024</span><br>Tech Tutor, Vintage Inc.</li>
                         </ul>
                     </div>
+
                     <div class="tab-contents" id="education">
                         <ul>
                             <li><span>August 2023 - April 2027</span><br>B.S. in Computer Science, Minor in Economics, University of Pittsburgh</li>
                             <li><span>August 2019 - June 2023</span><br>B.A., Central High School, Philadelphia</li>
                         </ul>
                     </div>
+
                     <div class="tab-contents" id="skills">
                         <ul>
-                            <li><span>Programming Languages</span><br>Java, Python, HTML/CSS, C, MIPS Assembly</li>
-                            <li><span>Tools/Software</span><br>VSCode, GitHub, Figma, Jupyter Notebook, Google Colab, Microsoft Suite, LaTex</li>
-                            <li><span>GUI/UI/UX</span><br>Experienced in creating user-friendly interfaces for web and apps.</li>
+                            <li><span>Programming Languages</span><br>Java, Python, HTML/CSS, JavaScript, C</li>
+                            <li><span>Tools/Software</span><br>VSCode, GitHub, Figma, Jupyter Notebook, Google Colab, Microsoft Suite, LaTeX</li>
+                            <li><span>UI/UX</span><br>Designing clean, user-friendly interfaces for web and mobile apps
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -80,21 +90,21 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
-                    <p>Focused on developing responsive, user-friendly websites that prioritize clarity, performance, and accessibility across all devices.</p>
+                    <p>Responsive, accessible websites focused on clarity and performance.</p>
                     <a href="#contact">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop-simple"></i>
                     <h2>UI/UX Design</h2>
-                    <p>Specialized in creating intuitive digital experiences through wireframes, prototypes, and thoughtful interface design that enhances usability.</p>
+                    <p>Wireframes and prototypes that improve usability and flow.</p>
                     <a href="#contact">Learn more</a>
                 </div>
                 <div>
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Data Analysis</h2>
-                <p>Skilled in analyzing datasets to uncover patterns and insights using tools such as Python, Pandas, and data visualization techniques.</p>
-                <a href="#contact">Learn more</a>
-            </div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Data Analysis</h2>
+                    <p>Python-based analysis and visualization for actionable insights.</p>
+                    <a href="#contact">Learn more</a>
+                </div>
             </div>
         </div>
     </section>
@@ -104,38 +114,51 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-2.png" alt="Pittsburgh Neighborhood Analysis">
+                    <img src="./static/images/pittsburgh.png" alt="Pittsburgh Neighborhood Analysis">
                     <div class="layer">
                         <h3>Pittsburgh Neighborhood Analysis</h3>
-                        <p>Analyzed Pittsburgh neighborhoods using Python, Jupyter, and Pandas for data-driven insights.</p>
-                        <a href="https://github.com/britneylu/CMPINF0010-finalproject" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>Python + Pandas data analysis project.</p>
+                        <a href="https://github.com/britneylu/CMPINF0010-finalproject" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="work">
-                    <img src="images/work-3.png" alt="Hangman Game">
+                    <img src="./static/images/hangman.png" alt="Hangman Game">
                     <div class="layer">
                         <h3>Hangman</h3>
-                        <p>A Java-based Hangman game with difficulty levels and stat tracking.</p>
-                        <a href="https://github.com/britneylu/HangMan" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>Java game with difficulty levels and stats.</p>
+                        <a href="https://github.com/britneylu/HangMan" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="work">
-                    <img src="images/work-1.png" alt="College Budgeting App">
+                    <img src="./static/images/savings_app.png" alt="College Budgeting App">
                     <div class="layer">
                         <h3>College Budgeting App</h3>
-                        <p>A budgeting app designed and developed for college students, integrating Java and Figma.</p>
-                        <a href="https://github.com/britneylu/She-Innovates-2024/tree/main/She%20Innovates%202024" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>Budgeting app designed with Java + Figma.</p>
+                        <a href="https://github.com/britneylu/She-Innovates-2024"
+                            target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="work">
-                    <img src="images/work-4.png" alt="The MacGuffin Hunter">
+                    <img src="./static/images/macguffin.png" alt="The MacGuffin Hunter">
                     <div class="layer">
                         <h3>The MacGuffin Hunter</h3>
-                        <p>A tile-based MIPS assembly game combining strategy and quick reflexes.</p>
-                        <a href="https://github.com/britneylu/The-MacGuffin-Hunter" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>MIPS assembly tile-based game.</p>
+                        <a href="https://github.com/britneylu/The-MacGuffin-Hunter" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+
             <a href="#contact" class="btn">See more</a>
         </div>
     </section>
@@ -147,12 +170,16 @@
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i> britneylu100@gmail.com</p>
                     <p><i class="fa-solid fa-square-phone"></i> (267) 939-9303</p>
+
                     <div class="social-icons">
+                        <a href="https://github.com/britneylu" target="_blank"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/britneylu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/britney_lkf/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <a href="images/my-resume.pdf" download class="btn btn2">Download Resume</a>
+
+                    <a href="./static/images/britney-lu-resume.pdf" download class="btn btn2">Download Resume</a>
                 </div>
+
                 <div class="contact-right">
                     <form id="contact-form">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -162,76 +189,15 @@
                     </form>
                     <span id="msg"></span>
                 </div>
-
             </div>
         </div>
+
         <div class="copyright">
             <p>&copy; 2025 Britney Lu. All rights reserved.</p>
         </div>
     </section>
 
-    <script src="scripts.js"></script>
-
-<script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link")
-            }
-
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-
-    </script>
-
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let form = this;
-            let formData = new FormData(form);
-            let submitButton = form.querySelector("button");
-
-            submitButton.innerText = "Sending...";
-            submitButton.disabled = true;
-
-            fetch("https://formsubmit.co/ajax/britneylu100@gmail.com", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("msg").innerHTML = "Message sent successfully!";
-                    setTimeout(() => document.getElementById("msg").innerHTML = "", 5000);
-                    form.reset();
-                    submitButton.innerText = "Send Message";
-                    submitButton.disabled = false;
-                })
-                .catch(error => {
-                    document.getElementById("msg").innerHTML = "Message failed to send. Try again.";
-                    submitButton.innerText = "Send Message";
-                    submitButton.disabled = false;
-                });
-        });
-    </script>
-    
+    <script src="./static/js/script.js"></script>
 </body>
 
 </html>
