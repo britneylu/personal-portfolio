@@ -15,7 +15,7 @@ body {
 }
 
 #header {
-    padding-top: 100px; /* Adjust this if nav is taller/shorter */
+    padding-top: 100px; /* adjust this if nav is taller/shorter */
     width: 100%;
     height: 100vh;
     background-image: url(../images/port_bg.png);
@@ -34,9 +34,10 @@ nav {
     width: 100%;
     z-index: 1000;
 
-    /* NEW: transparent background */
-    background: rgba(0, 0, 0, 0); /* fully transparent */
-    backdrop-filter: none;       /* no blur — optional */
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     display: flex;
     align-items: center;
@@ -89,12 +90,17 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
     color: #1F51FF;
+    text-shadow: 0 0 20px rgba(31, 81, 255, 0.4);
 }
 
 /*-----about----*/
 #about {
     padding: 80px 0;
     color: #ababab;
+}
+
+#about h1 {
+    margin-bottom: 15px;
 }
 
 .row {
@@ -186,7 +192,10 @@ nav ul li a:hover::after {
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: 
+        transform 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .whatido-list div i {
@@ -211,7 +220,8 @@ nav ul li a:hover::after {
 
 .whatido-list div:hover {
     background: #1F51FF;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(31, 81, 255, 0.25);
 }
 
 /*----------portfolio--------*/
@@ -242,7 +252,14 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #1F51FF);
+    /* background: linear-gradient(rgba(0,0,0,0.6), #1F51FF); */
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(31, 81, 255, 0.85)
+        );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -298,6 +315,16 @@ nav ul li a:hover::after {
 
 .btn:hover {
     background: #1F51FF;
+}
+
+/*----------what i do / work--------*/
+.whatido-list div {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /*----------contact--------*/
@@ -399,6 +426,17 @@ nav .fas {
         font-size: 30px;
     }
 
+    nav {
+        background: rgba(0, 0, 0, 0);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom: none;
+    }
+
+    nav ul.show { /* class added by your JS when menu is open */
+        pointer-events: auto;
+    }
+
     nav .fas {
         display: block;
         font-size: 25px;
@@ -414,6 +452,7 @@ nav .fas {
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        pointer-events: none;
     }
 
     nav ul li {

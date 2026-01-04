@@ -19,10 +19,12 @@ const sidemenu = document.getElementById("sidemenu");
 
 function openmenu() {
     sidemenu.style.right = "0";
+    document.getElementById("sidemenu").classList.add("show");
 }
 
 function closemenu() {
     sidemenu.style.right = "-200px";
+    document.getElementById("sidemenu").classList.remove("show");
 }
 
 /* ========= contact form ========= */
