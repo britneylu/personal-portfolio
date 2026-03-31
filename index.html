@@ -11,6 +11,19 @@
     <script src="https://kit.fontawesome.com/1c6782a8ec.js" crossorigin="anonymous"></script>
 </head>
 
+<div id="resume-modal" class="modal-overlay" onclick="closeResume()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <span>Britney Lu — Resume</span>
+            <div class="modal-actions">
+                <a href="./static/images/britney-lu-resume.pdf" download class="btn btn2">Download</a>
+                <i class="fa-solid fa-xmark" onclick="closeResume()"></i>
+            </div>
+        </div>
+        <iframe src="./static/images/britney-lu-resume.pdf" class="resume-frame"></iframe>
+    </div>
+</div>
+
 <body>
     <header id="header">
         <div class="container">
@@ -58,6 +71,7 @@
 
                     <div class="tab-contents active-tab" id="experience">
                         <ul>
+                            <li><span>Incoming Summer 2026</span><br>Product Manager Intern, Epicor</li>
                             <li><span>September 2024 - Present</span><br>Undergraduate Research Assistant, University of Pittsburgh</li>
                             <li><span>June 2025 - August 2025</span><br>IT Intern – Systems Development, AAA Club Alliance</li>
                             <li><span>February 2024 - April 2024</span><br>Tech Tutor, Vintage Inc.</li>
@@ -113,13 +127,21 @@
     <section id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
+            <!-- <div class="work-stats">
+                <span>5 Projects</span>
+                <span>·</span>
+                <span>2 Languages</span>
+                <span>·</span>
+                <span>3 Years Building</span>
+            </div> -->
             <div class="work-list">
                 <div class="work">
                     <img src="./static/images/job_app_tracker.png" alt="Job Application Tracker">
                     <div class="layer">
+                        <span class="work-tag">WEB</span>
                         <h3>Job Application Tracker</h3>
                         <p>
-                            A responsive web app for tracking job applications.
+                            A responsive web app for tracking job applications — status, deadlines, and notes in one place.
                         </p>
                         <a href="https://github.com/britneylu/job-app-tracker" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -130,8 +152,9 @@
                 <div class="work">
                     <img src="./static/images/pittsburgh.png" alt="Pittsburgh Neighborhood Analysis">
                     <div class="layer">
+                        <span class="work-tag">DATA</span>
                         <h3>Pittsburgh Neighborhood Analysis</h3>
-                        <p>Python + Pandas data analysis project.</p>
+                        <p>Python + Pandas data analysis project exploring livability metrics across Pittsburgh neighborhoods.</p>
                         <a href="https://github.com/britneylu/CMPINF0010-finalproject" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -141,8 +164,9 @@
                 <div class="work">
                     <img src="./static/images/hangman.png" alt="Hangman Game">
                     <div class="layer">
+                        <span class="work-tag">GAME</span>
                         <h3>Hangman</h3>
-                        <p>Java game with difficulty levels and stats.</p>
+                        <p>Java game with difficulty levels and live stats tracking.</p>
                         <a href="https://github.com/britneylu/HangMan" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -152,8 +176,9 @@
                 <div class="work">
                     <img src="./static/images/savings_app.png" alt="College Budgeting App">
                     <div class="layer">
+                        <span class="work-tag">WEB</span>
                         <h3>College Budgeting App</h3>
-                        <p>Budgeting app designed with Java + Figma.</p>
+                        <p>Budgeting app designed with Java + Figma for the She Innovates 2024 hackathon.</p>
                         <a href="https://github.com/britneylu/She-Innovates-2024"
                             target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -164,8 +189,9 @@
                 <div class="work">
                     <img src="./static/images/macguffin.png" alt="The MacGuffin Hunter">
                     <div class="layer">
+                        <span class="work-tag">GAME</span>
                         <h3>The MacGuffin Hunter</h3>
-                        <p>MIPS assembly tile-based game.</p>
+                        <p>MIPS assembly tile-based game — low-level logic, collision detection, and pixel rendering from scratch.</p>
                         <a href="https://github.com/britneylu/The-MacGuffin-Hunter" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -173,7 +199,7 @@
                 </div>
             </div>
 
-            <a href="#contact" class="btn">See more</a>
+            <a href="https://github.com/britneylu" class="btn">See more</a>
         </div>
     </section>
 
@@ -183,7 +209,7 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i> britneylu100@gmail.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i> (267) 939-9303</p>
+                    <!-- <p><i class="fa-solid fa-square-phone"></i> (267) 939-9303</p> -->
 
                     <div class="social-icons">
                         <a href="https://github.com/britneylu" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -191,7 +217,7 @@
                         <a href="https://www.instagram.com/britney_lkf/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
 
-                    <a href="./static/images/britney-lu-resume.pdf" download class="btn btn2">Download Resume</a>
+                    <a href="javascript:void(0)" onclick="openResume()" class="btn btn2">View Resume</a>
                 </div>
 
                 <div class="contact-right">
@@ -207,7 +233,7 @@
         </div>
 
         <div class="copyright">
-            <p>&copy; 2026 Britney Lu. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Britney Lu. All rights reserved.</p>
         </div>
     </section>
 
