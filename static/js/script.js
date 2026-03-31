@@ -118,7 +118,9 @@ form.addEventListener("submit", function (e) {
     submitButton.innerText = "Sending...";
     submitButton.disabled = true;
 
-    fetch("https://formsubmit.co/ajax/britneylu100@gmail.com", {
+    formData.append("access_key", "84c35d86-1208-43de-8041-fad6424fbdce");
+
+    fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData
     })
