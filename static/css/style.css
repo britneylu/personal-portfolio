@@ -176,7 +176,7 @@ nav ul li.active-nav a {
 }
 
 #about h1 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .row {
@@ -204,15 +204,19 @@ nav ul li.active-nav a {
     flex-basis: 60%;
 }
 
+.about-col-2 p {
+    font-size: 16px;
+}
+
 .sub-title {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     color: #fff;
 }
 
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 25px;
 }
 
 .tab-links {
