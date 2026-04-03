@@ -153,6 +153,3 @@ function closeResume() {
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeResume();
 });
-
-/* ========= dynamic year in footer ========= */
-document.getElementById("year").textContent = new Date().getFullYear();
