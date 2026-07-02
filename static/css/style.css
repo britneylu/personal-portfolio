@@ -382,8 +382,8 @@ nav ul li.active-nav a {
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    background: transparent;
+    transition: box-shadow 0.4s ease;
 }
 
 .work img {
@@ -394,10 +394,7 @@ nav ul li.active-nav a {
 }
 
 .work:hover {
-    border-color: rgba(31,81,255,0.5);
-    box-shadow:
-        0 0 0 1px rgba(31,81,255,0.2),
-        0 8px 30px rgba(31,81,255,0.15);
+    box-shadow: 0 8px 30px rgba(31,81,255,0.15);
 }
 
 .work:hover img {
@@ -438,7 +435,7 @@ nav ul li.active-nav a {
     letter-spacing: 2px;
     color: #1F51FF;
     background: rgba(31,81,255,0.12);
-    border: 1px solid rgba(31,81,255,0.35);
+    border: 1px solid rgba(0, 55, 255, 0.35);
     padding: 3px 10px;
     border-radius: 20px;
     margin-bottom: 12px;
