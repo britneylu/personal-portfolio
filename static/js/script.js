@@ -153,3 +153,19 @@ function closeResume() {
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeResume();
 });
+/* Desktop uses hover; phones use the native details toggle. */
+const projectPhoneLayout = window.matchMedia('(max-width: 600px)');
+const projectDetails = document.querySelectorAll('.work details');
+function syncProjectDetails() {
+    projectDetails.forEach(details => {
+        details.open = !projectPhoneLayout.matches;
+        details.querySelector('summary').tabIndex = projectPhoneLayout.matches ? 0 : -1;
+    });
+}
+projectDetails.forEach(details => {
+    details.querySelector('summary').addEventListener('click', event => {
+        if (!projectPhoneLayout.matches) event.preventDefault();
+    });
+});
+projectPhoneLayout.addEventListener('change', syncProjectDetails);
+syncProjectDetails();

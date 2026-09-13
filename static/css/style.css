@@ -190,7 +190,7 @@ nav ul li.active-nav a {
 }
 
 .about-col-1 img {
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -291,7 +291,7 @@ nav ul li.active-nav a {
     background: rgba(255,255,255,0.04);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    padding: 40px;
+    padding: 32px 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
@@ -316,8 +316,8 @@ nav ul li.active-nav a {
 }
 
 .whatido-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    margin-bottom: 24px;
     transition: text-shadow 0.4s;
 }
 
@@ -373,9 +373,21 @@ nav ul li.active-nav a {
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
     margin-top: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .work-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .work-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .work {
@@ -384,6 +396,10 @@ nav ul li.active-nav a {
     overflow: hidden;
     background: transparent;
     transition: box-shadow 0.4s ease;
+}
+
+.whatido-mobile {
+    display: none;
 }
 
 .work img {
@@ -419,7 +435,7 @@ nav ul li.active-nav a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 32px;
+    padding: 0 12px;
     text-align: center;
     font-size: 14px;
     transition: height 0.45s ease;
@@ -427,6 +443,14 @@ nav ul li.active-nav a {
 
 .work:hover .layer {
     height: 100%;
+    overflow-y: auto;
+    justify-content: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.layer > * {
+    flex-shrink: 0;
 }
 
 .work-tag {
@@ -781,27 +805,171 @@ nav .fas {
     }
  
     .whatido-list {
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 12px;
         margin-top: 30px;
     }
  
     .whatido-list div {
-        padding: 28px;
+        padding: 18px 12px;
+        font-size: 11px;
+        line-height: 1.5;
     }
  
     .whatido-list div i {
-        font-size: 36px;
+        font-size: 28px;
         margin-bottom: 16px;
     }
  
     .whatido-list div h2 {
-        font-size: 22px;
-        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+        margin-bottom: 8px;
+    }
+
+    .whatido-list div a {
+        font-size: 11px;
+    }
+
+    .whatido-list {
+        align-items: start;
+    }
+
+    .whatido-list > div > h2,
+    .whatido-list > div > p,
+    .whatido-list > div > a {
+        display: none;
+    }
+
+    .whatido-mobile {
+        display: block;
+    }
+
+    .whatido-mobile p {
+        margin-top: 8px;
+    }
+
+    .whatido-mobile a {
+        min-height: 44px;
+        align-content: center;
+        margin-top: 8px;
     }
 
     #whatido h1 {
         margin-top: -90px;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+        margin-top: 30px;
+        align-items: start;
+    }
+
+    .work .work-tag {
+        display: none;
+    }
+
+    .work:hover img {
+        transform: none;
+    }
+
+    .work:hover {
+        box-shadow: none;
+    }
+
+    .work-mobile {
+        display: block;
+        padding: 8px 2px 2px;
+        background: transparent;
+        text-align: left;
+    }
+
+    .work-mobile summary,
+    .whatido-mobile summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        color: #ededed;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+        cursor: pointer;
+        min-height: 44px;
+        list-style: none;
+    }
+
+    .work-mobile summary::-webkit-details-marker,
+    .whatido-mobile summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .work-mobile summary::after,
+    .whatido-mobile summary::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        flex-shrink: 0;
+        border-right: 2px solid #999;
+        border-bottom: 2px solid #999;
+        transform: rotate(45deg);
+    }
+
+    .work-mobile[open] summary::after,
+    .whatido-mobile[open] summary::after {
+        transform: rotate(225deg);
+    }
+
+    .work-mobile p {
+        margin-top: 8px;
+        color: rgba(255,255,255,0.8);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .work-mobile a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        margin-top: 8px;
+        color: #a9bcff;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .work-mobile summary:focus-visible,
+    .work-mobile a:focus-visible,
+    .whatido-mobile summary:focus-visible,
+    .whatido-mobile a:focus-visible {
+        outline: 2px solid #a9bcff;
+        outline-offset: 2px;
+    }
+
+    .work img {
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    .work .layer h3 {
+        font-size: 14px;
+        line-height: 1.35;
+        margin-bottom: 8px;
+        overflow-wrap: anywhere;
+    }
+
+    .work .layer p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .work .layer a {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        margin-top: 8px;
     }
 
     #portfolio h1 {
@@ -822,4 +990,61 @@ nav .fas {
         font-size: 14px;
     }
 
+}
+
+/* One project description shared by desktop and mobile. */
+.work details.layer {
+    display: block;
+}
+
+.work summary {
+    list-style: none;
+}
+
+.work summary::-webkit-details-marker {
+    display: none;
+}
+
+.work .layer a {
+    display: inline-block;
+}
+
+.project-link-label {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .work details.layer,
+    .work:hover details.layer {
+        position: static;
+        height: auto;
+        padding: 8px 2px 2px;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        text-align: left;
+        overflow: visible;
+    }
+
+    .work summary h3 {
+        margin: 0;
+        color: #ededed;
+    }
+
+    .work .layer a {
+        width: auto;
+        height: auto;
+        min-height: 44px;
+        line-height: 1.5;
+        align-content: center;
+        background: transparent;
+        color: #a9bcff;
+        font-size: 12px;
+        border-radius: 0;
+        text-align: left;
+    }
+
+    .project-link-label {
+        display: inline;
+    }
 }
