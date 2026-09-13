@@ -322,7 +322,7 @@ nav ul li.active-nav a {
 }
 
 .whatido-list div h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -900,6 +900,10 @@ nav .fas {
         cursor: pointer;
         min-height: 44px;
         list-style: none;
+    }
+
+    .whatido-mobile summary {
+        font-size: 12px;
     }
 
     .work-mobile summary::-webkit-details-marker,
